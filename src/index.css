@@ -1,0 +1,245 @@
+/* Animation Key Frames Here */
+
+@keyframes popUpSlideDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes slideUpToDown {
+  from {
+    opacity:0;
+    transform:translateY(-50px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0px);
+  }
+}
+
+@keyframes slideLeftToRight {
+  from {
+    opacity:0;
+    transform:translateX(-50px);
+  }
+  to {
+    opacity:1;
+    transform:translateX(0px);
+  }
+}
+
+@keyframes slideRightToLeft {
+  from {
+    opacity:0;
+    transform:translateX(50px);
+  }
+  to {
+    opacity:1;
+    transform:translateX(0px);
+  }
+}
+
+@keyframes slideLeftToRightDelay30 {
+  0% {
+    opacity:0;
+    transform:translateX(-50px);
+  }
+  30% {
+    opacity:0;
+    transform:translateX(-50px);
+  }
+  100% {
+    opacity:1;
+    transform:translateX(0px);
+  }
+}
+
+@keyframes slideRightToLeftDelay30 {
+  0% {
+    opacity:0;
+    transform:translateX(50px);
+  }
+  30% {
+    opacity:0;
+    transform:translateX(50px);
+  }
+  100% {
+    opacity:1;
+    transform:translateX(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*------------------------------------------------------*/
+/* Non-Linear Styles Here */
+
+.anim-slideUpToDown {
+  animation: 0.5s slideUpToDown ease-in-out;
+}
+
+.anim-slideLeftToRight {
+  animation: 0.5s slideLeftToRight ease-in-out;
+}
+
+.anim-slideRightToLeft {
+  animation: 0.5s slideRightToLeft ease-in-out;
+}
+
+.anim-slideLeftToRight-Delay-2s-30p {
+  animation: 2s slideLeftToRightDelay30 ease-in-out;
+}
+
+.anim-slideRightToLeft-Delay-2s-30p {
+  animation: 2s slideRightToLeftDelay30 ease-in-out;
+}
+
+.anim-slideRightToLeft-Delay-3s-30p {
+  animation: 3s slideRightToLeftDelay30 ease-in-out;
+}
+
+.anim-fadeIn {
+  animation: 0.5s fadeIn ease-in-out;
+}
+
+.anim-fadeIn-Delay-3s {
+  animation: 3s fadeIn ease-in-out;
+}
+
+.bg-lighter {
+  background: rgba(0, 0, 0, 0.826);
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+body {
+   background: rgb(0, 0, 0);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Helvetica, Arial, sans-serif;
+    overflow-x:hidden;
+    animation: 2.5s ShowEverything;
+}
+
+.blur {
+  pointer-events: none;
+  z-index:1;
+  filter: blur(10px);
+}
+
+.bottom-border-radius-fix {
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.card-wrapper-journey {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-journey {
+  width: 32.5%;
+  box-shadow: 2px 2px 5px black;
+  text-align: center;
+}
+
+.white-input-placeholder::placeholder {
+  color: rgba(144, 144, 144, 0.893);
+}
+
+.toggle-theme-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 20pt;
+  cursor: pointer;
+}
+
+.pop-up-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* darken background */
+  display: flex;
+  z-index: 999;
+}
+
+.pop-up {
+  position: fixed;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 1000;
+  min-width: 20%;
+  max-height: 50vh;
+  align-content: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  top: 50vh;
+  left: 50vw;
+}
+
+/*------------------------------------------------------*/
+/* Linear Styles Here */
+
+@media (max-width: 1440px) {
+  .card-journey {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-journey {
+    width: 48.75%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Non-Linear Styles Here */
+  .w-10 {
+    width: 35%;
+  }
+  /*------------------------------------------------------*/
+  /* Linear Styles Here */
+  .pop-up {
+    width: 90%;
+  }
+  .card-journey {
+    width: 100%;
+    text-align: left;
+  }
+  .toggle-theme-button {
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.35rem;
+    font-size: 16pt;
+  }
+}
